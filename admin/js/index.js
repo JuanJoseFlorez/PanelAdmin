@@ -114,6 +114,11 @@ const habilitarInput = (contador, identificador) => {
     }
 }
 
+document.getElementById('logout').onclick = function () {
+    localStorage.removeItem("token");
+    window.location.reload();
+}
+
 
 
 
