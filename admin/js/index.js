@@ -1,7 +1,9 @@
 let comilla = "'"
 let preguntas = document.getElementById('preguntasTable');
+let preguntasEn = document.getElementById('preguntasEnTable')
 let sectionPreguntas = document.getElementById('preguntas')
 let respuestas = document.getElementById('respuestasTable');
+let respuestasEn = document.getElementById('respuestasEnTable')
 let sectionRespuestas = document.getElementById('respuestas')
 let resultados = document.getElementById('resultadosTable');
 let sectionResultados = document.getElementById('resultados');
@@ -92,7 +94,9 @@ document.getElementById('navHerramientas').onclick = function () {
 
 
 listarPreguntas();
+listarPreguntasEn();
 listarRespuestas();
+listarRespuestasEn();
 listarResultados();
 listarUser();
 listarContact();

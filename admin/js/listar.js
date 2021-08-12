@@ -5,12 +5,27 @@ const listarPreguntas = () => {
             escribirPreguntas(data.questions);
         }).catch(message_error => console.log('F' + message_error))
 }
+const listarPreguntasEn = () => {
+    fetch("https://server-relyer.herokuapp.com/api/questionsen", {
+    }).then(response => response.json())
+        .then(data => {
+            escribirPreguntasEn(data.questions);
+        }).catch(message_error => console.log('F' + message_error))
+}
 
 const listarRespuestas = () => {
     fetch("https://server-relyer.herokuapp.com/api/answers/", {
     }).then(response => response.json())
         .then(data => {
             escribirRespuestas(data.answers);
+        }).catch(message_error => console.log('F' + message_error))
+}
+
+const listarRespuestasEn = () => {
+    fetch("https://server-relyer.herokuapp.com/api/answersen", {
+    }).then(response => response.json())
+        .then(data => {
+            escribirRespuestasEn(data.answers);
         }).catch(message_error => console.log('F' + message_error))
 }
 

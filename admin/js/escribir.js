@@ -26,6 +26,19 @@ const escribirPreguntas = (data) => {
         contador++;
     }
 }
+const escribirPreguntasEn = (data) => {
+    let contador = 1;
+    for (let value of data) {
+        preguntasEn.innerHTML += '<tr>' +
+            '<th scope="row">' + contador + '</th>' +
+            '<input type="hidden" value="' + value.uid + '">' +
+            '<td>' + value.uid + '</td>' +
+            '<td><input class="text preguntasen' + contador + '" type="text" disabled="true" value="' + value.question + '"></td>' +
+            '<td><input class="text preguntasen' + contador + '" type="text" disabled="true" value="' + value.type + '"></td>' +
+            '<td><i id="checkpreguntasen' + contador + '" onclick="actualizarPreguntaEn(' + comilla + value.uid + comilla + ',' + contador + ')" style="color:green; display:none" class="far fa-check-square"></i> <i id="editpreguntasen' + contador + '" onclick="habilitarInput(' + contador + ',' + comilla + 'preguntasen' + comilla + ')" class="far fa-edit"></i> <i onclick="eliminarPreguntaEn(' + comilla + value.uid + comilla + ')" class="far fa-trash-alt"></i></td></tr>'
+        contador++;
+    }
+}
 const escribirRespuestas = (data) => {
     let contador = 1;
     for (let value of data) {
@@ -36,6 +49,19 @@ const escribirRespuestas = (data) => {
             '<td><input class="text respuestas' + contador + '" type="text" disabled="true" value="' + value.value + '"></td>' +
             '<td><input class="text respuestas' + contador + '" type="text" disabled="true" value="' + value.questionId + '"></td>' +
             '<td><i id="checkrespuestas' + contador + '" onclick="actualizarRespuesta(' + comilla + value.uid + comilla + ',' + contador + ')" style="color:green; display:none" class="far fa-check-square"></i> <i id="editrespuestas' + contador + '" onclick="habilitarInput(' + contador + ',' + comilla + 'respuestas' + comilla + ')" class="far fa-edit"></i> <i onclick="eliminarRespuesta(' + comilla + value.uid + comilla + ')" class="far fa-trash-alt"></i></td></tr>'
+        contador++;
+    }
+}
+const escribirRespuestasEn = (data) => {
+    let contador = 1;
+    for (let value of data) {
+        respuestasEn.innerHTML += '<tr>' +
+            '<th scope="row">' + contador + '</th>' +
+            '<input type="hidden" value="' + value.uid + '">' +
+            '<td><input class="text respuestasen' + contador + '" type="text" disabled="true" value="' + value.answer + '"></td>' +
+            '<td><input class="text respuestasen' + contador + '" type="text" disabled="true" value="' + value.value + '"></td>' +
+            '<td><input class="text respuestasen' + contador + '" type="text" disabled="true" value="' + value.questionId + '"></td>' +
+            '<td><i id="checkrespuestasen' + contador + '" onclick="actualizarRespuestaEn(' + comilla + value.uid + comilla + ',' + contador + ')" style="color:green; display:none" class="far fa-check-square"></i> <i id="editrespuestasen' + contador + '" onclick="habilitarInput(' + contador + ',' + comilla + 'respuestasen' + comilla + ')" class="far fa-edit"></i> <i onclick="eliminarRespuestaEn(' + comilla + value.uid + comilla + ')" class="far fa-trash-alt"></i></td></tr>'
         contador++;
     }
 }
