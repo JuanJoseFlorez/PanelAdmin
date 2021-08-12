@@ -1,0 +1,36 @@
+main{
+    table{
+        tbody{
+            td{
+                width:auto;
+                height:auto;
+            }
+        }
+    }
+    i{
+        cursor: pointer;
+    }
+    section{
+        margin: 0% 2%;
+        table{
+            tbody{
+                .text{
+                    width: 100%;
+                    height: auto;
+                }
+                td{
+                    height: auto;
+                    width: auto;
+                }
+            }
+            input{
+                background-color: #FFFFFF;
+            }
+        }
+        input{
+            size: auto;
+            width: 20%;
+            background-color: #F2F2F2;
+        }
+    }
+}

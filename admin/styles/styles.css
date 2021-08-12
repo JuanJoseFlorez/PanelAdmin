@@ -1,0 +1,41 @@
+/*General*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif; }
+
+.menu {
+  background-color: aqua; }
+  .menu img {
+    width: 80px;
+    margin-left: 5px; }
+  .menu nav {
+    margin-bottom: 20px; }
+
+main table tbody td {
+  width: auto;
+  height: auto; }
+main i {
+  cursor: pointer; }
+main section {
+  margin: 0% 2%; }
+  main section table tbody .text {
+    width: 100%;
+    height: auto; }
+  main section table tbody td {
+    height: auto;
+    width: auto; }
+  main section table input {
+    background-color: #FFFFFF; }
+  main section input {
+    size: auto;
+    width: 20%;
+    background-color: #F2F2F2; }
+
+/*# sourceMappingURL=styles.css.map */

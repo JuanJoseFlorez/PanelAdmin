@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/Logo.png" alt="">
+                  </a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" id="navPreguntas" href="#">Preguntas</a>
+                        <a class="nav-item nav-link" id="navRespuestas" href="#">Respuestas</a>
+                        <a class="nav-item nav-link" id="navResultados" href="#">Resultados</a>
+                        <a class="nav-item nav-link" id="navUsuario" href="#">Usuario</a>
+                        <a class="nav-item nav-link" id="navContacto" href="#">Contacto</a>
+                        <a class="nav-item nav-link" id="navExpertos" href="#">Expertos</a>
+                        <a class="nav-item nav-link" id="navHerramientas" href="#">Herramientas</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <section id="preguntas">
+            <input type="text" id="inputPregunta" placeholder="Pregunta">
+            <input type="text" id="inputType" placeholder="Tipo">
+            <button type="button" class="btn btn-success" id="addQuestion">Agregar</button>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Pregunta</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="preguntasTable">
+                </tbody>
+            </table>
+        </section>
+
+        <section id="respuestas">
+            <input type="text" id="inputRespuesta" placeholder="Respuesta">
+            <input type="text" id="inputValue" placeholder="Valor">
+            <input type="text" id="inputPreguntaId" placeholder="PreguntaId">
+            <button type="button" class="btn btn-success" id="addAnswer">Agregar</button>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Answer</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Pregunta id</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="respuestasTable">
+                </tbody>
+            </table>
+        </section>
+
+        <section id="resultados">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Preguntas</th>
+                        <th scope="col">Respuestas</th>
+                        <th scope="col">Puntaje</th>
+                        <th scope="col">Id Usuario</th>
+                    </tr>
+                </thead>
+                <tbody id="resultadosTable">
+                </tbody>
+            </table>
+        </section>
+
+        <section id="usuarios">
+            <input type="text" id="inputNombre" placeholder="Nombre">
+            <input type="email" id="inputCorreo" placeholder="Correo">
+            <input type="password" id="inputPassword" placeholder="Contraseña">
+            <input type="text" id="inputLocation" placeholder="Location">
+            <input type="text" id="inputPosition" placeholder="Position">
+            <input type="text" id="inputRol" placeholder="Rol">
+            <button type="button" class="btn btn-success" id="addUser">Agregar</button>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Rol</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable">
+                </tbody>
+            </table>
+        </section>
+
+        
+        <section id="herramientas">
+            <input type="text" id="inputNombreHerramientas" placeholder="Nombre">
+            <input type="text" id="inputCategoria" placeholder="Categoria">
+            <input type="text" id="inputDescripcion" placeholder="Descripción">
+            <button type="button" class="btn btn-success" id="addTools">Agregar</button>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody id="toolsTable">
+                </tbody>
+            </table>
+        </section>
+
+
+        <section id="expertos">
+            <input type="text" id="inputNombreExpertos" placeholder="Nombre">
+            <input type="text" id="inputCategoriaExpertos" placeholder="Categoria">
+            <input type="text" id="inputCorreoExpertos" placeholder="Correo">
+            <input type="text" id="inputTelefonoExpertos" placeholder="Telefono">
+            <input type="text" id="inputCompaniaExpertos" placeholder="Compañia">
+            <input type="text" id="inputExperienciaExpertos" placeholder="Experiencia">
+            <button type="button" class="btn btn-success" id="addExpert">Agregar</button>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Compañia</th>
+                        <th scope="col">Experiencia</th>
+                    </tr>
+                </thead>
+                <tbody id="expertsTable">
+                </tbody>
+            </table>
+        </section>
+
+
+        <section id="contacto">
+            <input type="text" id="inpuNombreContacto" placeholder="Nombre">
+            <input type="text" id="inputCorreoContacto" placeholder="Correo">
+            <input type="text" id="inputTelefonoContacto" placeholder="Telefono">
+            <input type="text" id="inputComentario" placeholder="Comentario">
+            <button type="button" class="btn btn-success" id="addContact">Agregar</button>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Comentario</th>
+                    </tr>
+                </thead>
+                <tbody id="contactTable">
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    <footer>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://salacodigo.github.io/Relyer/">Relyer</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+    integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+<script src="js/sesion.js"></script>
+<script src="js/listar.js"></script>
+<script src="js/escribir.js"></script>
+<script src="js/preguntas.js"></script>
+<script src="js/respuestas.js"></script>
+<script src="js/resultados.js"></script>
+<script src="js/usuarios.js"></script>
+<script src="js/experts.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/tools.js"></script>
+<script src="js/index.js"></script>
+
+
+</html>
