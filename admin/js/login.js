@@ -1,20 +1,4 @@
-let tkn = localStorage.getItem("tokenAdmin");
-if (tkn) {
-    const validarToken = () => {
-        fetch("https://server-relyer.herokuapp.com/api/admin/", {
-            method: 'POST',
-            headers: {
-            "x-token": tkn
-            }
-        }).then(response => response.json())
-            .then(msg => {
-                if (msg.msg == "Sesion es valida") {
-                    window.location.href = "../admin/admin";
-                }
-            }).catch(message_error => console.log('F' + message_error))
-    }
-    validarToken();
-}
+
 
 const login = document.getElementsByClassName('loginForm')[0]
 
